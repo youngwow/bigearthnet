@@ -17,7 +17,7 @@ setup(
         "pyyaml>=5.3",
         "pytest",
         "pytorch_lightning==1.6.4",
-        "sklearn",
+        "scikit-learn",
         "timm",
         "torch==1.11",
         "torch_tb_profiler",

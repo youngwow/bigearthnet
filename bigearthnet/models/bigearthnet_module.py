@@ -127,7 +127,7 @@ class BigEarthNetModule(pl.LightningModule):
         )
         return outputs
 
-    def training_epoch_end(self, training_step_outputs):
+    def on_train_epoch_end(self, training_step_outputs):
         metrics = self._generic_epoch_end(training_step_outputs)
         self.log_metrics(metrics, split="train")
 
@@ -144,7 +144,7 @@ class BigEarthNetModule(pl.LightningModule):
         )
         return outputs
 
-    def validation_epoch_end(self, validation_step_outputs):
+    def on_validation_epoch_end(self, validation_step_outputs):
         if not self.trainer.sanity_checking:
             metrics = self._generic_epoch_end(validation_step_outputs)
             self.val_metrics = metrics  # cache for use in callback
@@ -155,7 +155,7 @@ class BigEarthNetModule(pl.LightningModule):
         outputs = self._generic_step(batch, batch_idx)
         return outputs
 
-    def test_epoch_end(self, test_step_outputs):
+    def on_test_epoch_end(self, test_step_outputs):
         metrics = self._generic_epoch_end(test_step_outputs)
         self.test_metrics = metrics
         self.log_metrics(metrics, split="test")
