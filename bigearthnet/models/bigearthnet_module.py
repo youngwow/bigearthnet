@@ -35,9 +35,6 @@ class BigEarthNetModule(pl.LightningModule):
         self.model = instantiate(cfg.model)
         self.save_hyperparameters(cfg, logger=False)
         self.init_loss()
-        self.validation_step_outputs = []
-        self.test_step_outputs = []
-        self.training_step_outputs = []
 
         self.class_names = get_class_names()
 
@@ -130,8 +127,8 @@ class BigEarthNetModule(pl.LightningModule):
         )
         return outputs
 
-    def on_train_epoch_end(self):
-        metrics = self._generic_epoch_end(self.training_step_outputs)
+    def training_epoch_end(self, training_step_outputs):
+        metrics = self._generic_epoch_end(training_step_outputs)
         self.log_metrics(metrics, split="train")
 
     def validation_step(self, batch, batch_idx):
@@ -147,9 +144,9 @@ class BigEarthNetModule(pl.LightningModule):
         )
         return outputs
 
-    def on_validation_epoch_end(self):
+    def validation_epoch_end(self, validation_step_outputs):
         if not self.trainer.sanity_checking:
-            metrics = self._generic_epoch_end(self.validation_step_outputs)
+            metrics = self._generic_epoch_end(validation_step_outputs)
             self.val_metrics = metrics  # cache for use in callback
             self.log_metrics(metrics, split="val")
 
@@ -158,8 +155,8 @@ class BigEarthNetModule(pl.LightningModule):
         outputs = self._generic_step(batch, batch_idx)
         return outputs
 
-    def on_test_epoch_end(self):
-        metrics = self._generic_epoch_end(self.test_step_outputs)
+    def test_epoch_end(self, test_step_outputs):
+        metrics = self._generic_epoch_end(test_step_outputs)
         self.test_metrics = metrics
         self.log_metrics(metrics, split="test")
 
