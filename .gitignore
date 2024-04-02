@@ -6,6 +6,8 @@ lightning_logs/
 outputs*/
 datasets/bigearthnet*
 .DS_Store
+my_work/onnx/images
+my_work/onnx/my_models
 
 *.tar
 

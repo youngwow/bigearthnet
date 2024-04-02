@@ -26,7 +26,7 @@ ls $SLURM_TMPDIR/$DATASET
 
 # Launch the job, tell it to save the model in $SLURM_TMPDIR
 # and look for the dataset into $SLURM_TMPDIR
-cd $HOME/bigearthnet/
+cd $HOME/development/new/bigearthnet/
 pip install -e .
 cd bigearthnet
 echo "beginning training..."

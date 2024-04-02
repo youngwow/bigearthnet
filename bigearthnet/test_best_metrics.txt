@@ -1,0 +1,229 @@
+
+    test Epoch: None
+    test Classification report:
+                                                                                        precision    recall  f1-score   support
+
+                                                                   Agro-forestry areas       0.00      0.00      0.00         4
+                                                                              Airports       0.00      0.00      0.00         0
+                                          Annual crops associated with permanent crops       0.00      0.00      0.00         0
+                                                                             Bare rock       0.00      0.00      0.00         1
+                                                                 Beaches, dunes, sands       0.00      0.00      0.00         0
+                                                                   Broad-leaved forest       0.23      1.00      0.37         9
+                                                                           Burnt areas       0.00      0.00      0.00         0
+                                                                       Coastal lagoons       0.00      0.00      0.00         0
+                                                          Complex cultivation patterns       0.00      0.00      0.00         2
+                                                                     Coniferous forest       0.00      0.00      0.00        10
+                                                                    Construction sites       0.00      0.00      0.00         0
+                                                               Continuous urban fabric       0.00      0.00      0.00         3
+                                                            Discontinuous urban fabric       0.00      0.00      0.00         5
+                                                                            Dump sites       0.00      0.00      0.00         1
+                                                                             Estuaries       0.00      0.00      0.00         0
+                                                     Fruit trees and berry plantations       0.00      0.00      0.00         0
+                                                                     Green urban areas       0.00      0.00      0.00         0
+                                                        Industrial or commercial units       0.00      0.00      0.00         2
+                                                                        Inland marshes       0.00      0.00      0.00         1
+                                                                      Intertidal flats       0.00      0.00      0.00         0
+Land principally occupied by agriculture, with significant areas of natural vegetation       0.00      0.00      0.00        10
+                                                              Mineral extraction sites       0.00      0.00      0.00         0
+                                                                          Mixed forest       0.38      1.00      0.55        15
+                                                                   Moors and heathland       0.00      0.00      0.00         2
+                                                                     Natural grassland       0.00      0.00      0.00         2
+                                                             Non-irrigated arable land       0.00      0.00      0.00        12
+                                                                          Olive groves       0.00      0.00      0.00         0
+                                                                              Pastures       0.00      0.00      0.00        10
+                                                                              Peatbogs       0.00      0.00      0.00         3
+                                                            Permanently irrigated land       0.00      0.00      0.00         2
+                                                                            Port areas       0.00      0.00      0.00         0
+                                                                           Rice fields       0.00      0.00      0.00         0
+                                            Road and rail networks and associated land       0.00      0.00      0.00         0
+                                                                               Salines       0.00      0.00      0.00         1
+                                                                          Salt marshes       0.00      0.00      0.00         1
+                                                             Sclerophyllous vegetation       0.00      0.00      0.00         1
+                                                                         Sea and ocean       0.00      0.00      0.00         5
+                                                              Sparsely vegetated areas       0.00      0.00      0.00         0
+                                                          Sport and leisure facilities       0.00      0.00      0.00         0
+                                                           Transitional woodland/shrub       0.33      1.00      0.49        13
+                                                                             Vineyards       0.00      0.00      0.00         1
+                                                                          Water bodies       0.00      0.00      0.00         4
+                                                                         Water courses       0.00      0.00      0.00         0
+
+                                                                             micro avg       0.31      0.31      0.31       120
+                                                                             macro avg       0.02      0.07      0.03       120
+                                                                          weighted avg       0.10      0.31      0.15       120
+                                                                           samples avg       0.31      0.27      0.28       120
+
+    test Confusion matrices:
+
+Agro-forestry areas
+[[36  0]
+ [ 4  0]]
+
+Airports
+[[40  0]
+ [ 0  0]]
+
+Annual crops associated with permanent crops
+[[40  0]
+ [ 0  0]]
+
+Bare rock
+[[39  0]
+ [ 1  0]]
+
+Beaches, dunes, sands
+[[40  0]
+ [ 0  0]]
+
+Broad-leaved forest
+[[ 0 31]
+ [ 0  9]]
+
+Burnt areas
+[[40  0]
+ [ 0  0]]
+
+Coastal lagoons
+[[40  0]
+ [ 0  0]]
+
+Complex cultivation patterns
+[[38  0]
+ [ 2  0]]
+
+Coniferous forest
+[[30  0]
+ [10  0]]
+
+Construction sites
+[[40  0]
+ [ 0  0]]
+
+Continuous urban fabric
+[[37  0]
+ [ 3  0]]
+
+Discontinuous urban fabric
+[[35  0]
+ [ 5  0]]
+
+Dump sites
+[[39  0]
+ [ 1  0]]
+
+Estuaries
+[[40  0]
+ [ 0  0]]
+
+Fruit trees and berry plantations
+[[40  0]
+ [ 0  0]]
+
+Green urban areas
+[[40  0]
+ [ 0  0]]
+
+Industrial or commercial units
+[[38  0]
+ [ 2  0]]
+
+Inland marshes
+[[39  0]
+ [ 1  0]]
+
+Intertidal flats
+[[40  0]
+ [ 0  0]]
+
+Land principally occupied by agriculture, with significant areas of natural vegetation
+[[30  0]
+ [10  0]]
+
+Mineral extraction sites
+[[40  0]
+ [ 0  0]]
+
+Mixed forest
+[[ 0 25]
+ [ 0 15]]
+
+Moors and heathland
+[[38  0]
+ [ 2  0]]
+
+Natural grassland
+[[38  0]
+ [ 2  0]]
+
+Non-irrigated arable land
+[[28  0]
+ [12  0]]
+
+Olive groves
+[[40  0]
+ [ 0  0]]
+
+Pastures
+[[30  0]
+ [10  0]]
+
+Peatbogs
+[[37  0]
+ [ 3  0]]
+
+Permanently irrigated land
+[[38  0]
+ [ 2  0]]
+
+Port areas
+[[40  0]
+ [ 0  0]]
+
+Rice fields
+[[40  0]
+ [ 0  0]]
+
+Road and rail networks and associated land
+[[40  0]
+ [ 0  0]]
+
+Salines
+[[39  0]
+ [ 1  0]]
+
+Salt marshes
+[[39  0]
+ [ 1  0]]
+
+Sclerophyllous vegetation
+[[39  0]
+ [ 1  0]]
+
+Sea and ocean
+[[35  0]
+ [ 5  0]]
+
+Sparsely vegetated areas
+[[40  0]
+ [ 0  0]]
+
+Sport and leisure facilities
+[[40  0]
+ [ 0  0]]
+
+Transitional woodland/shrub
+[[ 0 27]
+ [ 0 13]]
+
+Vineyards
+[[39  0]
+ [ 1  0]]
+
+Water bodies
+[[36  0]
+ [ 4  0]]
+
+Water courses
+[[40  0]
+ [ 0  0]]
+
+    
