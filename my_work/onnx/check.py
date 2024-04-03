@@ -43,7 +43,7 @@ def to_numpy(tensor):
 
 
 ckpt_path = r'my_models/best-model.ckpt'
-onnx_model_path = r'my_models/onnx_model.onnx'
+onnx_model_path = r'my_models/model_type_forest.onnx'
 dataset_dir = r'../../datasets/'  # root directory where to download the datasets
 dataset_name = "bigearthnet-mini"
 # One of bigearthnet-mini, bigearthnet-medium, bigearthnet-full
@@ -61,10 +61,13 @@ transforms = instantiate(model.cfg.transforms.obj)
 print(type(transforms))
 # Input to the model
 x_random = torch.randn(3, 120, 120, requires_grad=True)
-x_image = Image.open("images/test.tif")
+x_image = cv.imread("images/field.tif")
+x_image = cv.resize(x_image, (120, 120))
+x_image = cv.cvtColor(x_image, cv.COLOR_BGR2RGB)
 x_numpy = np.array(x_image)
 x_numpy = x_numpy[:, :, ::-1]  # RGB to BGR
 x_numpy = np.moveaxis(x_numpy, 2, 0)  # W, H, C >  C, W, H
+print(list(x_numpy.shape))
 assert list(x_random.shape) == list(x_numpy.shape)
 
 x_tensor = torch.tensor(x_numpy.copy(), dtype=torch.float32, requires_grad=True)
